@@ -1,7 +1,6 @@
 <div class="well">
-  <span class="task">
-    <%= link_to fa_icon('square-o', text: user_task.description), user_task, remote: true, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </span>
+  <%# TODO: Why doesn't the JQuery still work after editing a task? %>
+  <%= link_to fa_icon('square-o', text: user_task.description), user_task, remote: true, method: :delete, data: { confirm: 'Are you sure?' }, class: 'task' %>
 
   <%= link_to fa_icon('pencil', text: 'Edit'), edit_user_task_path(user_task), remote: true, class: 'btn btn-xs btn-primary' %>
 
